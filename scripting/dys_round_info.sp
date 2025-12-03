@@ -81,6 +81,11 @@ public void OnMapStart()
 	}
 }
 
+public void OnClientDisconnect_Post(int client)
+{
+	g_seenMessage[client] = false;
+}
+
 void ShowRounds(int client)
 {
 	char msg[32];
